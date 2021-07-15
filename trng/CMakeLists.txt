@@ -93,6 +93,7 @@ set(SOURCE_FILES
 
 add_library(trng4_static STATIC ${HEADER_FILES} ${SOURCE_FILES})
 set_target_properties(trng4_static PROPERTIES OUTPUT_NAME trng4 CLEAN_DIRECT_OUTPUT 1)
+set_target_properties(trng4_static PROPERTIES COMPILE_FLAGS "-fpic")
 target_include_directories(trng4_static PUBLIC ..)
 
 if (WIN32)
